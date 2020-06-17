@@ -1,0 +1,15 @@
+{
+  "name": "js-lessons",
+  "version": "1.0.0",
+  "description": "JS Lessons for private bootcamp course",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec jasmine"
+  },
+  "author": "Adam Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^5.0.2"
+  }
+}
