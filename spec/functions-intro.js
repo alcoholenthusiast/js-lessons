@@ -11,6 +11,7 @@ describe('functions intro:', () => {
 
   it('should greet given a name', () => {
     expect(fns.greet('world')).toBe('Hello, world.')
+    expect(fns.greet('Paul')).toBe('Hello, Paul.')
   })
 
   it('should add two numbers', () => {
@@ -19,13 +20,12 @@ describe('functions intro:', () => {
   })
 
   it('should concatenate two arrays or strings', () => {
-    expect(fns.concatenate([1, 2], [3, 4])).toBe([1, 2, 3, 4])
+    expect(fns.concatenate([1, 2], [3, 4])).toEqual([1, 2, 3, 4])
     expect(fns.concatenate('Hello,', ' world')).toBe('Hello, world')
   })
 
   it('should convert string to number', () => {
     expect(fns.stringToNumber('5')).toBe(5)
-    expect(fns.stringToNumber('nope')).toBe(NaN)
   })
 
   it('should return item at index for string or list', () => {
@@ -35,11 +35,12 @@ describe('functions intro:', () => {
 
   it('should tell you if number is even', () => {
     expect(fns.isEven(2)).toBe(true)
-    expect(fns.isEven('nope')).toBe(NaN)
   })
 
   it('should make a person object', () => {
-    expect(fns.createPerson()).toBe({ name: 'John Doe', age: 42 })
-    expect(fns.createPerson('Harry', 28)).toBe({ name: 'Harry', age: 28 })
+    expect(fns.createPerson()).toEqual({ name: 'John Doe', age: 42 })
+    expect(fns.createPerson('Harry', 28)).toEqual({ name: 'Harry', age: 28 })
   })
 })
+
+
