@@ -1,6 +1,6 @@
 const fns = require('../loops.js')
 
-describe('loops are your friend', () => {
+fdescribe('loops are your friend', () => {
   it('should have an array from 1 to 100', () => {
     expect(fns.loop100().length).toBe(100)
   })
@@ -16,11 +16,11 @@ describe('loops are your friend', () => {
   })
 
   it('should find all the animals that can be pets', () => {
-    expect(fns.findPets()).toEqual(['cat', 'dog', 'lizard', 'tiger'])
+    expect(fns.findPets(fns.vars.animals)).toEqual(['cat', 'dog', 'lizard', 'tiger'])
   })
 
   it('should find all the cakes that have the word cake in it alphabetized', () => {
-    expect(fns.findCakes()).toEqual([
+    expect(fns.findCakes(fns.vars.cakes)).toEqual([
       'cupcake',
       'ice cream cake',
       'strawberry shortcake'
@@ -41,6 +41,6 @@ describe('loops are your friend', () => {
       { cake: 'ice cream cake', price: 10.34 }
     ]
 
-    expect(fns.getCakePrices()).toEqual(answer)
+    expect(fns.getCakePrices(fns.vars.cakes, fns.vars.cakePrices)).toEqual(answer)
   })
 })
